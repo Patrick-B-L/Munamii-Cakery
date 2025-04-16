@@ -1,0 +1,129 @@
+body{
+    display: flex;
+    background-color: rgba(250, 235, 215, 0.497);
+    justify-content: center;
+    min-height: 100vh;
+    margin: 20px;
+    color: saddlebrown;
+    text-align: center;
+    min-width: 300px;
+}
+.container {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    max-height: fit-content;
+    min-height: 100vh;
+    max-width: 1000px;
+    min-width: 220px;
+    padding: 20px;
+    
+}
+.headerBackground {
+    background-image: url('/images/headerBackGround2.jpg');
+    background-size: cover;
+    padding: 10px;
+    margin: -20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.container nav .logoArea {
+    background-color: #fff;
+    display: flex;
+    height: 80px;
+    border-radius: 50%;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: 1px 3px 10px;
+}
+
+nav .logoArea img{
+    height: 70%;
+    align-self: center;
+}
+
+.linkArea {
+    display: flex;
+    font-size: smaller;
+    height: 10px;
+    align-items: center;
+    gap: 5px;
+}
+nav .linkArea a{
+    margin-right: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+nav .linkArea a:hover{
+    color: darkblue;
+    text-decoration: underline;
+    transform: scale(1.20);
+}
+.cupcakes ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+}
+.cupcakes ul li {
+    margin: 10px;
+}
+.cupcakes img {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.cupcakes img:hover {
+    transform: scale(1.20);
+}
+
+.weddingCakes ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+}
+.weddingCakes ul li {
+    margin: 10px;
+}
+.weddingCakes img {
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.weddingCakes img:hover {
+    transform: scale(1.20);
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
+@media (max-width:600px) {
+    .cupcakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weddingCakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .linkArea {
+        flex-direction: column;
+    }
+}
+    
+
+@media (max-width:320px) {
+    .container{
+        margin-right: 20px;
+    }
+}
