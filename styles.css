@@ -26,7 +26,7 @@ body{
     
 }
 .headerBackground {
-    background-image: url('/images/headerBackGround2.jpg');
+    background-image: url('images/headerBackGround2.jpg');
     background-size: cover;
     padding: 10px;
     margin: -20px;
