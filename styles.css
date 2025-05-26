@@ -88,7 +88,7 @@ Main {
     box-shadow: 0px 4px 10px ;
     border-radius: 5px;
     min-height: 80vh;
-    padding: 0rem 2rem;
+    padding: 0rem 2rem 2rem;
 }
 .cupcakes ul {
     display: grid;
@@ -127,6 +127,32 @@ Main {
 .weddingCakes img:hover {
     transform: scale(1.20);
 }
+.carousel-area {
+    display: flex;
+    justify-content: space-around;
+}
+.carousel {
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+}
+.carousel img.fade-out {
+  opacity: 0;
+}
+.carousel.no-shadow {
+  box-shadow: none;
+}
+
 #footer-placeholder {
 
     margin-top: auto;
@@ -137,46 +163,25 @@ Main {
 /* #footer-placeholder img {
     height: 0.8rem;
 } */
-
+.socialMediaLinks {
+    padding-bottom: 1rem;
+}
 .socialMediaLinks a img, i{
     margin-right: 20px;
 }
 
 .socialMediaLinks a i{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .socialMediaLinks a img {
-    height: 2rem;
+    height: 1.5rem;
 }
 
 .socialMediaLinks a img:hover,i:hover {
     transform: scale(1.20);
 }
-@media (max-width:600px) {
-    body {
-        padding: 0;
-    }
-    .container {
-        margin: 0;
-    }
-    .cupcakes ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .weddingCakes ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .linkArea {
-        flex-direction: column;
-    }
-}
-    
 
-@media (max-width:320px) {
-    .container{
-        margin-right: 20px;
-    }
-}
 
 /* Hamburger button styling */
 .hamburger {
@@ -250,5 +255,44 @@ Main {
     }
     .hamburger-btn:hover {
         transform: scale(1.30);
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        margin: 0;
+    }
+    .container {
+        margin: 0;
+    }
+    .container nav .logoArea {
+        height: 2.5rem;
+        display: block;
+        overflow: hidden;
+    }
+    .container nav .logoArea img {
+        height: 2rem;
+        align-self: center;
+        margin: 0.15rem 0rem;
+    }
+    .carousel-area {
+        display: block;
+        justify-self: center;
+    }
+    .cupcakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weddingCakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .linkArea {
+        flex-direction: column;
+    }
+}
+    
+
+@media (max-width:320px) {
+    .container{
+        margin-right: 20px;
     }
 }

@@ -19,9 +19,21 @@
                 <h1>Hi! Welcome to Munamii Cakery!</h1>
                 <p>We offer you the most delicious cakes and cupcakes for all kinds of events and celebrations. Browse around to discover what you would like to buy.</p>
                 <!-- Button to navigate to the products page -->
-                 <div>
-                    <a href="products.html#goToCupCake">Cupcakes</a>
-                    <a href="products.html#goToWeddingCake">Wedding Cakes</a>
+                 <div class="carousel-area">
+                    <div>
+                        <a href="products.html#goToCupCake">Cupcakes</a>
+                        <!-- Cupcake carousel -->
+                        <div id="cupcake-carousel" class="carousel">
+                        <img id="cupcake-img" src="images/cc1.jpg" alt="Cupcake">
+                        </div>
+                        </div>
+                    <div>
+                        <a href="products.html#goToWeddingCake">Wedding Cakes</a>
+                        <!-- Wedding cake carousel -->
+                        <div id="weddingcake-carousel" class="carousel">
+                        <img id="weddingcake-img" src="images/wec1.jpg" alt="Wedding Cake">
+                        </div>
+                    </div>
                  </div>
                  <div>
                     <a href="products.html" class="btn">Shop Now</a>
@@ -42,6 +54,7 @@
         <div id="footer-placeholder"></div>
     </div>
     <script src="header.js"></script>
+    <script src="carousel.js"></script>
     <script src="footer.js"></script>
 </body>
 </html>
