@@ -7,36 +7,30 @@
     <!-- External stylesheet for consistent styling across pages -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Main container for the entire page content -->
     <div class="container">
         <!-- Header section with branding and navigation -->
-        <header>
-            <div class="headerBackground">
-                <nav>
-                    <div class="logoArea">
-                        <img src="images/logo.png" alt="Munamii Cakery">
-                    </div>
-                    <div class="linkArea">
-                        <a href="index.html">Home</a>
-                        <a href="products.html">Products</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="about.html">About</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <div id="header-placeholder"></div>
         <!-- Main content area -->
         <main>
             <div>
                 <h1>Hi! Welcome to Munamii Cakery!</h1>
                 <p>We offer you the most delicious cakes and cupcakes for all kinds of events and celebrations. Browse around to discover what you would like to buy.</p>
                 <!-- Button to navigate to the products page -->
-                <a href="products.html" class="btn">Shop Now</a>
+                 <div>
+                    <a href="products.html#goToCupCake">Cupcakes</a>
+                    <a href="products.html#goToWeddingCake">Wedding Cakes</a>
+                 </div>
+                 <div>
+                    <a href="products.html" class="btn">Shop Now</a>
+                 </div>
+
             </div>
         </main>
         <!-- Footer section with social media links -->
-        <footer>
+        <!-- <footer>
             <div class="footerBackground">
                 <div class="socialMediaLinks">
                     <a href="https://facebook.com" target="_blank">Facebook</a>
@@ -44,7 +38,10 @@
                     <a href="mailto:">Email Us</a>
                 </div>
             </div>
-        </footer>
+        </footer> -->
+        <div id="footer-placeholder"></div>
     </div>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
 </body>
 </html>

@@ -8,7 +8,6 @@ body{
     margin: 20px;
     color: saddlebrown;
     text-align: center;
-    min-width: 300px;
 }
 .container {
     display: flex;
@@ -20,15 +19,16 @@ body{
     max-height: fit-content;
     min-height: 100vh;
     max-width: 1000px;
-    min-width: 220px;
+    min-width: 350px;
     padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
     box-sizing: border-box;
     
 }
 .headerBackground {
     background-image: url('./images/headerBackGround2.jpg');
     background-size: cover;
-    padding: 10px;
     margin: -20px;
 }
 nav {
@@ -38,15 +38,15 @@ nav {
 .container nav .logoArea {
     background-color: #fff;
     display: flex;
-    height: 80px;
+    height: 5rem;
     border-radius: 50%;
     padding: 20px;
-    margin-right: 10px;
+    margin: 1rem;
     box-shadow: 1px 3px 10px;
 }
 
-nav .logoArea img{
-    height: 70%;
+nav .logoArea a, img{
+    height: 3.5rem;
     align-self: center;
 }
 
@@ -55,23 +55,40 @@ nav .logoArea img{
     font-size: smaller;
     height: 10px;
     align-items: center;
+    margin-top: 1rem;
     gap: 5px;
 }
 nav .linkArea a{
     margin-right: 10px;
+    color: #4d3224;
+    font-style: oblique;
+    font-weight: 800;
     gap: 10px;
     flex-wrap: wrap;
     text-decoration: none;
     transition: color 0.3s ease;
     border-radius: 5px;
-    background-color:rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 50px;
+    /* background-color:rgba(255, 255, 255, 0.9); */
+    /* box-shadow: 1px 3px 10px rgba(139, 69, 19, 0.8); */
     padding: 5px;
 }
 nav .linkArea a:hover{
     color: darkblue;
     text-decoration: underline;
     transform: scale(1.20);
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+Main {
+    margin-top: 2rem;
+    box-shadow: 0px 4px 10px ;
+    border-radius: 5px;
+    min-height: 80vh;
+    padding: 0rem 2rem;
 }
 .cupcakes ul {
     display: grid;
@@ -110,16 +127,39 @@ nav .linkArea a:hover{
 .weddingCakes img:hover {
     transform: scale(1.20);
 }
-footer {
+#footer-placeholder {
 
     margin-top: auto;
     padding: 20px;
     text-align: center;
 }
-.socialMediaLinks a {
-    margin-right: 10px;
+
+/* #footer-placeholder img {
+    height: 0.8rem;
+} */
+
+.socialMediaLinks a img, i{
+    margin-right: 20px;
+}
+
+.socialMediaLinks a i{
+    font-size: 2.5rem;
+}
+
+.socialMediaLinks a img {
+    height: 2rem;
+}
+
+.socialMediaLinks a img:hover,i:hover {
+    transform: scale(1.20);
 }
 @media (max-width:600px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        margin: 0;
+    }
     .cupcakes ul {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -135,5 +175,80 @@ footer {
 @media (max-width:320px) {
     .container{
         margin-right: 20px;
+    }
+}
+
+/* Hamburger button styling */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    /* margin-top: 2rem; */
+    align-self: center;
+    height: 2rem;
+}
+
+/* Show hamburger and hide links on small screens */
+@media (max-width: 900px) {
+    .container nav .logoArea {
+        height: 4rem;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    .logoArea img {
+        height: 2.5rem;
+        margin: 0.5rem;
+
+    }
+
+
+    .linkArea {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        height: 150px;
+        position: absolute;
+        top: 2rem; /* adjust as needed */
+        right: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 100;
+        padding: 20px;
+    }
+    .linkArea.active {
+        display: flex;
+    }
+    nav .linkArea {
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        width: 4rem;
+        background-color: #fff;
+    }
+
+    nav .linkArea a {
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0;
+
+    }
+    .hamburger {
+        display: block;
+        color: saddlebrown;
+        margin-right: 1rem;
+    }
+    .hamburger-btn {
+        display: flex;
+        color: #4d3224;
+        background-color: transparent;
+        border: none;
+        align-self: flex-end;
+        cursor: pointer;
+        font-size: smaller;
+    }
+    .hamburger-btn:hover {
+        transform: scale(1.30);
     }
 }
