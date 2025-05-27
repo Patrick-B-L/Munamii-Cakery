@@ -20,7 +20,7 @@ body{
     min-height: 100vh;
     max-width: 1000px;
     min-width: 350px;
-    padding: 8rem 20px;
+    padding: 7rem 20px 0;
     border-radius: 5px;
     overflow: hidden;
     box-sizing: border-box;
@@ -41,6 +41,9 @@ button, input[type="submit"] {
 }
 button:hover, input[type="submit"]:hover {
     transform: scale(1.2);
+}
+.go-to-wedding-cakes-btn, .back-to-cupcakes-btn {
+    height: 3rem;
 }
 .headerBackground {
     background-image: url('./images/headerBackGround2.jpg');
@@ -245,6 +248,9 @@ Main {
 
 /* Show hamburger and hide links on small screens */
 @media (max-width: 900px) {
+        .container {
+        padding-top: 4.5rem;
+    }
     .container nav .logoArea {
         height: 4rem;
         padding: 0.5rem;
@@ -255,8 +261,6 @@ Main {
         margin: 0.5rem;
 
     }
-
-
     .linkArea {
         display: none;
         flex-direction: column;
@@ -308,6 +312,7 @@ Main {
     .hamburger-btn:hover {
         transform: scale(1.30);
     }
+
 }
 
 @media (max-width:600px) {
@@ -316,6 +321,11 @@ Main {
     }
     .container {
         margin: 0;
+        padding-top: 4.2rem;
+        width: 95vw;
+    }
+    .headerBackground {
+        width: 95vw;
     }
     .container nav .logoArea {
         height: 2.5rem;
