@@ -15,4 +15,20 @@ fetch('header.html')
     document.querySelector('.hamburger-btn').addEventListener('click', function() {
       document.querySelector('.linkArea').classList.remove('active');
     });
+
+      let lastScroll = 0;
+const header = document.querySelector('.headerBackground');
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScroll && currentScroll > 50) {
+        // Scrolling down
+        header.classList.add('hide-header');
+    } else {
+        // Scrolling up
+        header.classList.remove('hide-header');
+    }
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+});
   });
+

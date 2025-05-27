@@ -14,22 +14,51 @@ body{
     flex-direction: column;
     flex: 1;
     position: relative;
-    width: 100%;
+    width: 90vw;
     background-color: #fff;
     max-height: fit-content;
     min-height: 100vh;
     max-width: 1000px;
     min-width: 350px;
-    padding: 20px;
+    padding: 8rem 20px;
     border-radius: 5px;
     overflow: hidden;
     box-sizing: border-box;
-    
+
+}
+button, input[type="submit"] {
+    background-color: saddlebrown;
+    color: #fff;
+    font-size: 0.7rem;
+    height: 2rem;
+    width: 6rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: #fff;
+    box-shadow: 0px 4px 10px saddlebrown;
+    cursor: pointer;
+}
+button:hover, input[type="submit"]:hover {
+    transform: scale(1.2);
 }
 .headerBackground {
     background-image: url('./images/headerBackGround2.jpg');
     background-size: cover;
-    margin: -20px;
+    position: fixed;
+    width: 90vw;
+    max-width: 1000px;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    box-shadow: 0 4px 16px -4px rgba(0,0,0,0.15);
+    transform: translatex(-50%);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+/* Smooth hide/show for header */
+.hide-header {
+    transform: translate(-50%, -110%);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 nav {
     display: flex;
@@ -127,13 +156,24 @@ Main {
 .weddingCakes img:hover {
     transform: scale(1.20);
 }
+.border-home {
+    border-top: 1.5px solid rgba(139, 69, 19, 0.15);
+    width: 80%;
+    justify-self: center;
+}
 .carousel-area {
     display: flex;
     justify-content: space-around;
 }
+.individual-carousel-area {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 3rem 1rem;
+}
 .carousel {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 160px;
   margin: 1rem;
   overflow: hidden;
   border-radius: 10px;
@@ -151,6 +191,9 @@ Main {
 }
 .carousel.no-shadow {
   box-shadow: none;
+}
+.shop-now-btn {
+    margin: 2rem;
 }
 
 #footer-placeholder {
@@ -188,12 +231,16 @@ Main {
     display: none;
     font-size: 2rem;
     background: none;
+    margin: 0;
+    padding: 0;
     border: none;
+    box-shadow: none;
     cursor: pointer;
     margin-left: 10px;
     /* margin-top: 2rem; */
     align-self: center;
     height: 2rem;
+    width: 2rem;
 }
 
 /* Show hamburger and hide links on small screens */
@@ -228,9 +275,10 @@ Main {
     nav .linkArea {
         align-items: center;
         justify-content: center;
-        padding: 0.5rem 1rem;
-        width: 4rem;
+        padding: 1rem;
+        width: 5rem;
         background-color: #fff;
+        border-radius: 0.5rem;
     }
 
     nav .linkArea a {
@@ -248,6 +296,10 @@ Main {
         display: flex;
         color: #4d3224;
         background-color: transparent;
+        width: 1.5rem;
+        box-shadow: none;
+        margin: 0;
+        margin-right: -0.5rem;
         border: none;
         align-self: flex-end;
         cursor: pointer;
