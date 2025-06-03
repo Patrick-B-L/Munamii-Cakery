@@ -30,5 +30,8 @@ window.addEventListener('scroll', function() {
     }
     lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
+    if (typeof updateCartCount === 'function') {
+        updateCartCount();
+    }
   });
 
