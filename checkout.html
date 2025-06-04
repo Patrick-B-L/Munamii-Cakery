@@ -10,70 +10,21 @@
     <div class="container">
         <div id="header-placeholder"></div>
         <main>
-            <h1>Din kundvagn</h1>
+            <h1>Your Cart</h1>
             <ul id="cart-list"></ul>
             <h2 id="cart-total"></h2>
             <form id="order-form">
-                <h3>Beställning</h3>
-                <input type="text" name="name" placeholder="Namn" required><br>
-                <input type="email" name="email" placeholder="E-post" required><br>
-                <input type="text" name="address" placeholder="Adress" required><br>
-                <button type="submit">Skicka beställning</button>
+                <h3>Order</h3>
+                <input type="text" name="name" placeholder="Name" required><br>
+                <input type="email" name="email" placeholder="E-mail" required><br>
+                <input type="text" name="address" placeholder="Address" required><br>
+                <button type="submit">Submit</button>
             </form>
             <div id="order-message"></div>
         </main>
         <div id="footer-placeholder"></div>
     </div>
-    <script>
-    function renderCart() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const list = document.getElementById('cart-list');
-        const total = document.getElementById('cart-total');
-        list.innerHTML = '';
-        let sum = 0;
-        cart.forEach(item => {
-            const price = parseFloat(item.price.replace('$',''));
-            sum += price * item.qty;
-            list.innerHTML += `<li>
-                <img src="${item.img}" alt="${item.title}" style="height:40px;">
-                ${item.title} 
-                <button class="qty-btn" data-title="${item.title}" data-delta="-1">-</button>
-                ${item.qty}
-                <button class="qty-btn" data-title="${item.title}" data-delta="1">+</button>
-                <span>${item.price}</span>
-                <button class="remove-btn" data-title="${item.title}">Ta bort</button>
-            </li>`;
-        });
-        total.textContent = 'Totalt: $' + sum.toFixed(2);
-    }
-
-    // Hantera ändring av antal och ta bort
-    document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('qty-btn')) {
-            const title = e.target.dataset.title;
-            const delta = parseInt(e.target.dataset.delta, 10);
-            window.changeQty(title, delta);
-            renderCart();
-        }
-        if (e.target.classList.contains('remove-btn')) {
-            const title = e.target.dataset.title;
-            window.removeFromCart(title);
-            renderCart();
-        }
-    });
-
-    // Hantera beställningsformulär
-    document.getElementById('order-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        localStorage.removeItem('cart');
-        renderCart();
-        document.getElementById('cart-count').textContent = '0';
-        document.getElementById('order-message').textContent = 'Tack för din beställning!';
-        this.reset();
-    });
-
-    document.addEventListener('DOMContentLoaded', renderCart);
-    </script>
+    <script src="checkout.js"></script>
     <script src="header.js"></script>
     <script src="footer.js"></script>
 </body>
