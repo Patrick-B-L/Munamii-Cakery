@@ -82,15 +82,16 @@ nav .logoArea a, img{
     align-self: center;
 }
 
-.linkArea {
+.nav-area {
     display: flex;
+    flex-direction: column;
     font-size: smaller;
     height: 10px;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 1rem;
     gap: 5px;
 }
-nav .linkArea a{
+.nav-area a{
     margin-right: 10px;
     color: #4d3224;
     font-style: oblique;
@@ -105,13 +106,16 @@ nav .linkArea a{
     /* box-shadow: 1px 3px 10px rgba(139, 69, 19, 0.8); */
     padding: 5px;
 }
-nav .linkArea a:hover{
+.nav-area a:hover{
     color: darkblue;
     text-decoration: underline;
     transform: scale(1.20);
 }
+.cart-link-area {
+    margin-top: 5rem;
+}
 
-.hamburger-btn {
+.hamburger-close {
     display: none;
 }
 
@@ -278,6 +282,7 @@ Main {
 
 #cart-list img {
     height: 4rem;
+    width: 4rem;
     border-radius: 5px;
 }
 #cart-list img:hover {
@@ -385,56 +390,66 @@ transform: scale(1.20);
     }
     .linkArea {
         display: none;
-        flex-direction: column;
         background: #fff;
-        height: 150px;
+        height: 12rem;
         position: absolute;
-        top: 2rem; /* adjust as needed */
+        top: 1.5rem; /* adjust as needed */
         right: 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        z-index: 100;
-        padding: 20px;
-    }
-    .linkArea.active {
-        display: flex;
-    }
-    nav .linkArea {
         align-items: center;
         justify-content: center;
         padding: 1rem;
         width: 5rem;
         background-color: #fff;
         border-radius: 0.5rem;
+        z-index: 100;
+    }
+    .linkArea.active {
+        display: flex;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
     }
 
-    nav .linkArea a {
+    .linkArea a {
         background-color: transparent;
         box-shadow: none;
         margin: 0;
-
+        margin-bottom: 1rem;
     }
     .hamburger {
         display: block;
-        color: saddlebrown;
-        margin-right: 1rem;
+        color: #4d3224;
+        margin-right: 0rem;
     }
-    .hamburger-btn {
+    .hamburger-close {
         display: flex;
         color: #4d3224;
         background-color: transparent;
         width: 1.5rem;
         box-shadow: none;
-        margin: 0;
+        margin-left: auto;
         margin-right: -0.5rem;
         border: none;
         align-self: flex-end;
         cursor: pointer;
         font-size: smaller;
     }
-    .hamburger-btn:hover {
+    .hamburger-close:hover {
         transform: scale(1.30);
     }
-
+    .cart-link-area{
+        margin-top: 2rem;
+        margin-right: 0.5rem;
+    }
+    /* .nav-area a.cart-link {
+        color: saddlebrown;
+    }
+    .nav-area a.cart-link:hover {
+        color: darkblue;
+        text-decoration: underline;
+    } */
 }
 
 @media (max-width:600px) {
@@ -471,6 +486,13 @@ transform: scale(1.20);
     }
     .linkArea {
         flex-direction: column;
+    }
+    .hamburger {
+        margin-top: -0.5rem;
+    }
+        .cart-link-area{
+        margin-top: 1rem;
+        margin-right: 0.5rem;
     }
 }
     

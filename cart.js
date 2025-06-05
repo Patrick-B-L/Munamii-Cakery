@@ -47,6 +47,14 @@ document.addEventListener('click', function(e) {
             price: btn.dataset.price,
             img: btn.dataset.img
         });
+                // Byt text tillfälligt
+        const originalText = btn.textContent;
+        btn.textContent = "Cake Added!";
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+        }, 1200); // 1,2 sekunder
     }
 });
 document.addEventListener('DOMContentLoaded', updateCartCount);

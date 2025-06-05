@@ -12,7 +12,7 @@ fetch('header.html')
     });
 
     // Close the menu when hamburger-btn (X) is clicked
-    document.querySelector('.hamburger-btn').addEventListener('click', function() {
+    document.querySelector('.hamburger-close').addEventListener('click', function() {
       document.querySelector('.linkArea').classList.remove('active');
     });
 

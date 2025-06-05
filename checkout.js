@@ -17,7 +17,7 @@
                 <div class = "cart-remove-1-btn"> 
                 <button class="qty-btn" data-title="${item.title}" data-delta="-1">-</button>
                 </div>
-                <div class = "cart-qty">
+                <div class = "cart-qty">Quantity:
                 ${item.qty}
                 </div>
                 <div class = "cart-add-1-btn">
