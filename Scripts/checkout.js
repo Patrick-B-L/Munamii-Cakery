@@ -57,7 +57,7 @@
         localStorage.removeItem('cart');
         renderCart();
         document.getElementById('cart-count').textContent = '0';
-        document.getElementById('order-message').textContent = 'Tack för din beställning!';
+        document.getElementById('order-message').textContent = 'Thank you for your order!';
         this.reset();
     });
 

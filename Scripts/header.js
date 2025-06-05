@@ -1,5 +1,5 @@
 // Load the header from header.html and insert it into the page
-fetch('header.html')
+fetch('/pages/header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;

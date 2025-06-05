@@ -1,0 +1,85 @@
+.go-to-wedding-cakes-btn, .back-to-cupcakes-btn {
+    height: 3rem;
+}
+.cupcakes ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+}
+.cupcakes ul li {
+    margin: 10px;
+}
+.cupcakes img {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.cupcakes img:hover {
+    transform: scale(1.20);
+}
+
+.weddingCakes ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+}
+.weddingCakes ul li {
+    margin: 10px;
+}
+.weddingCakes img {
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.weddingCakes img:hover {
+    transform: scale(1.20);
+}
+
+.product-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.popup-content {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 90vh;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(139,69,19,0.18);
+}
+.popup-content img {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #a0522d;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+@media (max-width:600px){
+        .cupcakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weddingCakes ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

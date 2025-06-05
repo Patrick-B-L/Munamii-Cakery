@@ -1,0 +1,198 @@
+.headerBackground {
+    background-image: url('../images/headerBackGround2.jpg');
+    background-size: cover;
+    position: fixed;
+    width: 90vw;
+    max-width: 1000px;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    box-shadow: 0 4px 16px -4px rgba(0,0,0,0.15);
+    transform: translatex(-50%);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+/* Smooth hide/show for header */
+.hide-header {
+    transform: translate(-50%, -110%);
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.container nav .logoArea {
+    background-color: #fff;
+    display: flex;
+    height: 5rem;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 1rem;
+    box-shadow: 1px 3px 10px;
+}
+
+nav .logoArea a, img{
+    height: 3.5rem;
+    align-self: center;
+}
+
+.nav-area {
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    height: 10px;
+    align-items: flex-end;
+    margin-top: 1rem;
+    gap: 5px;
+}
+.nav-area a{
+    margin-right: 10px;
+    color: #4d3224;
+    font-style: oblique;
+    font-weight: 800;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    width: 50px;
+    /* background-color:rgba(255, 255, 255, 0.9); */
+    /* box-shadow: 1px 3px 10px rgba(139, 69, 19, 0.8); */
+    padding: 5px;
+}
+.nav-area a:hover{
+    color: darkblue;
+    text-decoration: underline;
+    transform: scale(1.20);
+}
+.nav-links{
+    display: flex;
+}
+
+.cart-link-area {
+    margin-top: 5rem;
+}
+
+.hamburger-close {
+    display: none;
+}
+
+/* Hamburger button styling */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin-left: 10px;
+    /* margin-top: 2rem; */
+    align-self: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Show hamburger and hide links on small screens */
+@media (max-width: 900px) {
+        /* .container {
+        padding-top: 4.5rem;
+    } */
+    .container nav .logoArea {
+        height: 4rem;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    .logoArea img {
+        height: 2.5rem;
+        margin: 0.5rem;
+
+    }
+    .linkArea {
+        display: none;
+        background: #fff;
+        height: 12rem;
+        position: absolute;
+        top: 1.5rem; /* adjust as needed */
+        right: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 5rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        z-index: 100;
+    }
+    .linkArea.active {
+        display: flex;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linkArea a {
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .hamburger {
+        display: block;
+        color: #4d3224;
+        margin-right: 0rem;
+    }
+    .hamburger-close {
+        display: flex;
+        color: #4d3224;
+        background-color: transparent;
+        width: 1.5rem;
+        box-shadow: none;
+        margin-left: auto;
+        margin-right: -0.5rem;
+        border: none;
+        align-self: flex-end;
+        cursor: pointer;
+        font-size: smaller;
+    }
+    .hamburger-close:hover {
+        transform: scale(1.30);
+    }
+    .cart-link-area{
+        margin-top: 2rem;
+        margin-right: 0.5rem;
+    }
+    /* .nav-area a.cart-link {
+        color: saddlebrown;
+    }
+    .nav-area a.cart-link:hover {
+        color: darkblue;
+        text-decoration: underline;
+    } */
+}
+@media (max-width:600px) {
+    .headerBackground {
+        width: 95vw;
+    }
+    .container nav .logoArea {
+        height: 2.5rem;
+        display: block;
+        overflow: hidden;
+    }
+    .container nav .logoArea img {
+        height: 2rem;
+        align-self: center;
+        margin: 0.15rem 0rem;
+    }
+        .linkArea {
+        flex-direction: column;
+    }
+    .hamburger {
+        margin-top: -0.5rem;
+    }
+        .cart-link-area{
+        margin-top: 1rem;
+        margin-right: 0.5rem;
+    }
+}
