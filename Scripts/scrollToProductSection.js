@@ -3,12 +3,12 @@ function scrollToSectionWithOffset(sectionId) {
     const header = document.querySelector('.headerBackground');
     const headerHeight = header ? header.offsetHeight : 0;
     if (target) {
-        const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10; // 10px extra luft
+        const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10; // 10px extra space
         window.scrollTo({ top: y, behavior: 'smooth' });
     }
 }
 
-// Hantera hash-länk vid sidladdning (t.ex. products.html#goToWeddingCake)
+// Monitor hash changes in the URL(e.g., when navigating to a section via a link)
 window.addEventListener('DOMContentLoaded', function() {
     const hash = window.location.hash.replace('#', '');
     if (hash === 'goToCupCake' || hash === 'goToWeddingCake') {
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Hantera knappklick på sidan (om du har knappar med dessa id:n)
+// Add event listeners for buttons to scroll to specific sections
 document.addEventListener('DOMContentLoaded', function() {
     const goToWeddingBtn = document.getElementById('goToWeddingCakesBtn');
     if (goToWeddingBtn) {

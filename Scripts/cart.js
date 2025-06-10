@@ -1,15 +1,19 @@
+// Function to get the cart from localStorage
 function getCart() {
     return JSON.parse(localStorage.getItem('cart')) || [];
 }
+// Function to set the cart in localStorage
 function setCart(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
+// Function to update the cart count displayed on the page
 function updateCartCount() {
     const cart = getCart();
     const count = cart.reduce((sum, item) => sum + item.qty, 0);
     const el = document.getElementById('cart-count');
     if (el) el.textContent = count;
 }
+// Function to add an item to the cart
 function addToCart(product) {
     let cart = getCart();
     const found = cart.find(item => item.title === product.title);
@@ -21,12 +25,14 @@ function addToCart(product) {
     setCart(cart);
     updateCartCount();
 }
+// Function to remove an item from the cart
 function removeFromCart(title) {
     let cart = getCart();
     cart = cart.filter(item => item.title !== title);
     setCart(cart);
     updateCartCount();
 }
+// Function to change quantity of an item in the cart
 function changeQty(title, delta) {
     let cart = getCart();
     const item = cart.find(i => i.title === title);
@@ -38,7 +44,7 @@ function changeQty(title, delta) {
     }
 }
 
-// Event delegation för "Lägg till i kundvagn"
+// Event listener for "Add to Cart" buttons
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('add-to-cart-btn')) {
         const btn = e.target;
@@ -47,7 +53,7 @@ document.addEventListener('click', function(e) {
             price: btn.dataset.price,
             img: btn.dataset.img
         });
-                // Byt text tillfälligt
+        // Change button text and disable it for 1.2 seconds
         const originalText = btn.textContent;
         btn.textContent = "Cake Added!";
         btn.disabled = true;

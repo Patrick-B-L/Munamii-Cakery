@@ -22,9 +22,11 @@ const weddingCakeImages = [
   "images/wec8.jpg"
 ];
 
+// Indexes to track current image
 let cupcakeIndex = 0;
 let weddingCakeIndex = 0;
 
+// Function to show next cupcake image
 function showNextCupcake() {
   const img = document.getElementById("cupcake-img");
   const carousel = document.getElementById("cupcake-carousel");
@@ -37,19 +39,7 @@ function showNextCupcake() {
     carousel.classList.remove("no-shadow");
   }, 700);
 }
-// function showNextCupcake() {
-//   const img = document.getElementById("cupcake-img");
-//   img.classList.add("fade-out");
-//   setTimeout(() => {
-//     cupcakeIndex = (cupcakeIndex + 1) % cupcakeImages.length;
-//     img.src = cupcakeImages[cupcakeIndex];
-//     img.classList.remove("fade-out");
-//   }, 700); // matchar transition-tiden i CSS
-// }
-// function showNextCupcake() {
-//   cupcakeIndex = (cupcakeIndex + 1) % cupcakeImages.length;
-//   document.getElementById("cupcake-img").src = cupcakeImages[cupcakeIndex];
-// }
+// Function to show next wedding cake image
 
 function showNextWeddingCake() {
   const img = document.getElementById("weddingcake-img");
@@ -64,21 +54,6 @@ function showNextWeddingCake() {
   }, 700);
 }
 
-// function showNextWeddingCake() {
-//   const img = document.getElementById("weddingcake-img");
-//   img.classList.add("fade-out");
-//   setTimeout(() => {
-//     weddingCakeIndex = (weddingCakeIndex + 1) % weddingCakeImages.length;
-//     img.src = weddingCakeImages[weddingCakeIndex];
-//     img.classList.remove("fade-out");
-//   }, 700);
-// }
-
-// function showNextWeddingCake() {
-//   weddingCakeIndex = (weddingCakeIndex + 1) % weddingCakeImages.length;
-//   document.getElementById("weddingcake-img").src = weddingCakeImages[weddingCakeIndex];
-// }
-
-// Byt bild var 2,5 sekund
+// Start the carousels
 setInterval(showNextCupcake, 5000);
 setInterval(showNextWeddingCake, 5000);

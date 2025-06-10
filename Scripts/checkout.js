@@ -1,3 +1,4 @@
+    // Render various items in the cart
     function renderCart() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const list = document.getElementById('cart-list');
@@ -36,7 +37,7 @@
         total.textContent = 'Total: $' + sum.toFixed(2);
     }
 
-    // Hantera ändring av antal och ta bort
+     
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('qty-btn')) {
             const title = e.target.dataset.title;
@@ -51,7 +52,7 @@
         }
     });
 
-    // Hantera beställningsformulär
+    // Event listener for the order form submission
     document.getElementById('order-form').addEventListener('submit', function(e) {
         e.preventDefault();
         localStorage.removeItem('cart');

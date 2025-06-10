@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/Styles/base.css">
+    <link rel="stylesheet" href="/Styles/products.css">
+    <link rel="icon" type="image/png" href="/images/cc8.jpg">
+</head>
+<body>
+    <div class="container">
+                <!-- Header section with branding and navigation -->
+        <div id="header-placeholder"></div>
+        <!-- Main content area -->
+        <main>
+            <div class="productsHeader">
+                <h1>Our Products</h1>
+                <p>Explore our delicious range of cakes and pastries!</p>
+            </div>
+
+            <div class="cakeLinks">
+                        <button id="goToWeddingCakesBtn"class="go-to-wedding-cakes-btn">Go To Wedding Cakes &darr;</button>
+            </div>
+        
+        <div class="cupcakes" id="goToCupCake">
+            <h1 class="cakeHeader">Cupcakes</h1>
+            <p class="cakeText">Our delicious cupcakes are perfect for any occasion. Choose from a variety of flavors and designs!</p>
+            <p class="cakeText">All cupcakes are 2.99$ each.</p>
+            <ul></ul>
+        </div>
+        <div class="cakeLinks">
+                <button id="backToCupcakesBtn" class="back-to-cupcakes-btn">Back To Cupcakes &uarr;</button>
+        </div>
+        <div class="weddingCakes" id="goToWeddingCake">
+            <h1 class="cakeHeader">Wedding Cakes</h1>
+            <ul></ul>
+        </div>
+        <!-- Produkt-popup -->
+        <div id="product-popup" class="product-popup" style="display:none;">
+        <div class="popup-content">
+            <span class="popup-close" id="popup-close">&times;</span>
+            <img id="popup-img" src="" alt="" />
+            <h2 id="popup-title"></h2>
+            <p id="popup-price"></p>
+            <p id="popup-desc"></p>
+        </div>
+        </div>
+        </main>
+        <div id="footer-placeholder"></div>
+    </div>
+    <script src="/Scripts/header.js"></script>
+    <script src="/Scripts/products-data.js"></script>
+    <script src="/Scripts/products.js"></script>
+    <script src="/Scripts/cart.js"></script>
+    <script src="/Scripts/footer.js"></script>
+    <script src="/Scripts/scrollToProductSection.js"></script>
+</body>
+</html>
