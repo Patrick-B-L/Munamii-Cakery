@@ -1,5 +1,6 @@
 .go-to-wedding-cakes-btn, .back-to-cupcakes-btn {
     height: 3rem;
+    margin: 2rem;
 }
 .cupcakes ul {
     display: grid;

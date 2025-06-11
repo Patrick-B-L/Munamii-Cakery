@@ -1,8 +1,4 @@
-.border-home {
-    border-top: 1.5px solid rgba(139, 69, 19, 0.15);
-    width: 80%;
-    justify-self: center;
-}
+
 .carousel-area {
     display: flex;
     justify-content: space-around;

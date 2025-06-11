@@ -44,11 +44,16 @@ button:hover, input[type="submit"]:hover {
 }
 
 Main {
-    margin-top: 2.5rem;
-    box-shadow: 0px 4px 10px ;
+    margin-top: 0.3rem;
+    box-shadow: 0px 0px 4px 0px rgba(139, 69, 19, 0.2);
     border-radius: 5px;
     min-height: 80vh;
     padding: 0rem 2rem 2rem;
+}
+.border-section {
+    border-top: 1.5px solid rgba(139, 69, 19, 0.15);
+    width: 80%;
+    justify-self: center;
 }
 
 @media (max-width: 900px) {
