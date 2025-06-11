@@ -48,6 +48,13 @@
                     </div>
                  </div>
             </div>
+                                <!-- <div id="search-popup" class="search-popup" style="display:none;">
+                        <div class="search-popup-content">
+                            <span class="search-popup-close" id="search-popup-close">&times;</span>
+                            <input type="text" id="search-input" placeholder="Search products or pages..." autofocus>
+                            <ul id="search-results"></ul>
+                        </div>
+                    </div> -->
         </main>
         <!-- Footer section with social media links -->
         <!-- <footer>
@@ -59,10 +66,14 @@
                 </div>
             </div>
         </footer> -->
+        <div id="search-popup-placeholder"></div>
         <div id="footer-placeholder"></div>
     </div>
     <script src="/Scripts/header.js"></script>
     <script src="/Scripts/carousel.js"></script>
+    <!--Import product-data.js before search.js in order to be able to search products-->
+    <script src="/Scripts/products-data.js"></script>
+    <script src="/Scripts/search.js"></script>
     <script src="/Scripts/cart.js"></script>
     <script src="/Scripts/footer.js"></script>
 </body>

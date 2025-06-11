@@ -69,7 +69,7 @@ nav .logoArea a, img{
     gap: 5px;
 }
 .nav-area a{
-    margin-right: 10px;
+    margin-right: 0.5rem;
     color: #4d3224;
     font-style: oblique;
     font-weight: 800;
@@ -91,9 +91,20 @@ nav .logoArea a, img{
 .nav-links{
     display: flex;
 }
-
+.search-link-area{
+    justify-self: flex-end;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
 .cart-link-area {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}
+.search-link-area i{
+    margin-right: 0.5rem;
+}
+.cart-link-area i{
+    margin-right: 0.2rem;
 }
 
 .hamburger-close {
@@ -117,6 +128,7 @@ nav .logoArea a, img{
     width: 2rem;
 }
 
+
 /* Show hamburger and hide links on small screens */
 @media (max-width: 900px) {
         /* .container {
@@ -124,32 +136,35 @@ nav .logoArea a, img{
     } */
     .container nav .logoArea {
         height: 4rem;
+        width: 4rem;
         padding: 0.5rem;
         margin: 1rem;
     }
     .logoArea img {
-        height: 2.5rem;
-        margin: 0.5rem;
+        height: 2.2rem;
+        width: 3.2rem;
+        margin-left: 0.4rem;
 
     }
     .linkArea {
         display: none;
         background: #fff;
-        height: 12rem;
+        height: 15rem;
         position: absolute;
-        top: 1.5rem; /* adjust as needed */
-        right: 20px;
+        top: 1rem; /* adjust as needed */
+        right: 0.5rem;
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         align-items: center;
         justify-content: center;
-        padding: 1rem;
+        padding: 0rem 1rem 1rem;
         width: 5rem;
         background-color: #fff;
         border-radius: 0.5rem;
-        z-index: 100;
+        z-index: 1002;
     }
     .linkArea.active {
         display: flex;
+        flex-direction: column;
     }
     .nav-links{
         display: flex;
@@ -162,10 +177,11 @@ nav .logoArea a, img{
         margin: 0;
         margin-bottom: 1rem;
     }
+    
     .hamburger {
         display: block;
         color: #4d3224;
-        margin-right: 0rem;
+        margin-right: 1rem;
     }
     .hamburger-close {
         display: flex;
@@ -201,13 +217,16 @@ nav .logoArea a, img{
     }
     .container nav .logoArea {
         height: 2.5rem;
+        width: 2.5rem;
         display: block;
         overflow: hidden;
     }
     .container nav .logoArea img {
-        height: 2rem;
+        height: 1.5rem;
+        width: 2.5rem;
         align-self: center;
-        margin: 0.15rem 0rem;
+        margin: 0rem;
+        margin-top: 0.5rem;
     }
         .linkArea {
         flex-direction: column;

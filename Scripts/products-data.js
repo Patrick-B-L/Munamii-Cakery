@@ -1,6 +1,4 @@
 const cupcakes = [
-  // { title: "Cupcake 1", img: "images/cc1.jpg", price: "2.99$" },
-  // { title: "Cupcake 2", img: "images/cc2.jpg", price: "2.99$" },
   { title: "Cupcake 1", img: "../images/cc1.jpg", price: "2.99$", desc: "Classic vanilla cupcake with buttercream." },
   { title: "Cupcake 2", img: "../images/cc2.jpg", price: "2.99$", desc: "Chocolate cupcake with chocolate frosting." },
   { title: "Cupcake 3", img: "../images/cc3.jpg", price: "2.99$", desc: "Red velvet cupcake with cream cheese frosting." },

@@ -58,7 +58,7 @@ Main {
 
 @media (max-width: 900px) {
         .container {
-        padding-top: 4.5rem;
+        padding-top: 6.5rem;
     }
 }
 
@@ -68,7 +68,7 @@ Main {
     }
     .container {
         margin: 0;
-        padding-top: 4.2rem;
+        padding-top: 6rem;
         width: 95vw;
     }
 }

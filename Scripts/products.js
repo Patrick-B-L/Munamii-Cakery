@@ -1,8 +1,13 @@
+function toId(str) {
+  return str.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase();
+}
+
 function renderProducts() {
   // Cupcakes
   const cupcakeList = document.querySelector('.cupcakes ul');
   cupcakes.forEach((cupcake, i) => {
     const li = document.createElement('li');
+    li.id = toId(cupcake.title);
     li.innerHTML = `
       <h2 class="title">${cupcake.title}</h2>
       <img src="${cupcake.img}" alt="${cupcake.title}" data-type="cupcake" data-index="${i}" title = "Description">
@@ -16,6 +21,7 @@ function renderProducts() {
   const weddingCakeList = document.querySelector('.weddingCakes ul');
   weddingCakes.forEach((cake, i) => {
     const li = document.createElement('li');
+    li.id = toId(cake.title);
     li.innerHTML = `
       <h2 class="title">${cake.title}</h2>
       <img src="${cake.img}" alt="${cake.title}" data-type="wedding" data-index="${i}">
