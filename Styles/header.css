@@ -20,6 +20,7 @@
     transform: translatex(-50%);
     transition: transform 0.4s cubic-bezier(.4,0,.2,1);
     border-bottom: 1px solid #4d3224;
+    overflow: visible;
 }
 /* Header background gradient */
 .headerBackground::after {

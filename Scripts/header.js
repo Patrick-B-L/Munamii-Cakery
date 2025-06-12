@@ -20,6 +20,13 @@ fetch('/Home/header.html')
 const header = document.querySelector('.headerBackground');
 
 window.addEventListener('scroll', function() {
+  // Kolla om cart-popup eller hamburgermenyn är öppen
+    const cartPopupOpen = document.getElementById('cart-popup')?.style.display === 'flex';
+    const menuOpen = document.querySelector('.linkArea')?.classList.contains('active');
+    if (cartPopupOpen || menuOpen) {
+        // Om någon popup/meny är öppen, gör inget
+        return;
+    }
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     if (currentScroll > lastScroll && currentScroll > 50) {
         // Scrolling down
