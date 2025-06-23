@@ -1,4 +1,4 @@
-fetch('Home/search-popup.html')
+fetch('search-popup.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('search-popup-placeholder').innerHTML = data;

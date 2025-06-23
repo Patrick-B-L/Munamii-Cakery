@@ -1,4 +1,4 @@
-fetch('Home/cart-popup.html')
+fetch('cart-popup.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('cart-popup-placeholder').innerHTML = data;
