@@ -204,13 +204,6 @@ nav .logoArea a, img{
         margin-top: 2rem;
         margin-right: 0.5rem;
     }
-    /* .nav-area a.cart-link {
-        color: saddlebrown;
-    }
-    .nav-area a.cart-link:hover {
-        color: darkblue;
-        text-decoration: underline;
-    } */
 }
 @media (max-width:600px) {
     .headerBackground {

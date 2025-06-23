@@ -7,7 +7,6 @@ const cupcakes = [
   { title: "Cupcake 6", img: "../images/cc6.jpg", price: "2.99$", desc: "Strawberry cupcake with strawberry frosting." },
   { title: "Cupcake 7", img: "../images/cc7.jpg", price: "2.99$", desc: "Cookies and cream cupcake with chocolate chips." },
   { title: "Cupcake 8", img: "../images/cc8.jpg", price: "2.99$", desc: "Mint chocolate chip cupcake with mint frosting." },
-  // ...lägg till fler cupcakes
 ];
 
 const weddingCakes = [

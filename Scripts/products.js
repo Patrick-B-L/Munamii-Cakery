@@ -50,7 +50,6 @@ function renderProducts() {
     });
   });
 
-  // Stäng popup
   document.getElementById('popup-close').addEventListener('click', function() {
     document.getElementById('product-popup').style.display = 'none';
   });

@@ -9,7 +9,7 @@ fetch('/Home/cart-popup.html')
             }
         });
 
-        // Öppna popup när man klickar på kundvagnsikonen
+        // Event delegation for cart link and close button
         document.addEventListener('click', function(e) {
             if (e.target.closest('.cart-link')) {
             e.preventDefault();
@@ -18,9 +18,6 @@ fetch('/Home/cart-popup.html')
             if (e.target.id === 'cart-popup-close') {
             document.getElementById('cart-popup').style.display = 'none';
             }
-            // if (e.target.id === 'cart-popup') {
-            // document.getElementById('cart-popup').style.display = 'none';
-            // }
         });
 
         
