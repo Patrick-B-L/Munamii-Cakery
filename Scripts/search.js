@@ -1,4 +1,8 @@
-fetch('search-popup.html')
+const searchPopupPath = location.pathname.endsWith('index.html') || location.pathname === '/' 
+  ? 'Home/search-popup.html' 
+  : 'search-popup.html';
+
+fetch(searchPopupPath)
   .then(res => res.text())
   .then(data => {
     document.getElementById('search-popup-placeholder').innerHTML = data;
@@ -6,14 +10,14 @@ fetch('search-popup.html')
     // Example data: You can expand this with more pages/products
     const searchableItems = [
       // Automatically generated from products-data.js
-      ...cupcakes.map(c => ({ type: "product", name: c.title, url: "Home/products.html#" + c.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase() })),
-      ...weddingCakes.map(c => ({ type: "product", name: c.title, url: "Home/products.html#" + c.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase() })),
+      ...cupcakes.map(c => ({ type: "product", name: c.title, url: "products.html#" + c.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase() })),
+      ...weddingCakes.map(c => ({ type: "product", name: c.title, url: "products.html#" + c.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9\-]/g, '').toLowerCase() })),
       // Manually added pages
-      { type: "page", name: "About", url: "Home/about.html" },
-      { type: "page", name: "Contact", url: "Home/contact.html" },
-      { type: "page", name: "Home", url: "index.html" },
-      { type: "page", name: "Checkout", url: "Home/checkout.html" },
-      { type: "page", name: "Products", url: "Home/products.html" }
+      { type: "page", name: "About", url: "about.html" },
+      { type: "page", name: "Contact", url: "contact.html" },
+      { type: "page", name: "Home", url: "../index.html" },
+      { type: "page", name: "Checkout", url: "checkout.html" },
+      { type: "page", name: "Products", url: "products.html" }
     ];
 
     // Open popup
