@@ -38,7 +38,7 @@
 .cart-popup-list-wrapper{
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px rgba(139, 69, 19, 0.3);
+  box-shadow: 1px 1px 5px rgba(139, 69, 19, 0.1);
   background: #f9f9f9;
 }
 #cart-popup-list {
