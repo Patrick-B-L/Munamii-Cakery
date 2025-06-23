@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munamii</title>
+    <link rel="icon" type="image/png" href="images/cc8.jpg">
+    <!-- External stylesheet for consistent styling across pages -->
+    <link rel="stylesheet" href="Styles/base.css">
+    <link rel="stylesheet" href="Styles/index.css">
+</head>
+
+<body>
+    <!-- Main container for the entire page content -->
+    <div class="container">
+        <!-- Header section with branding and navigation -->
+        <div id="header-placeholder"></div>
+        <!-- Main content area -->
+        <main>
+            <div>
+                <h1>Hi! Welcome to Munamii Cakery!</h1>
+                <p>We offer you the most delicious cakes and cupcakes for all kinds of events and celebrations. Browse around to discover what you would like to buy.</p>
+                <!-- Button to navigate to the products page -->
+                <div>
+                    <a href="Home/products.html">
+                        <button class="shop-now-btn">Shop Now</button>
+                    </a>
+                 </div>
+                 <div class="border-section"></div>
+                 <div class="carousel-area">
+                    <div class="individual-carousel-area">
+                        <!-- Cupcake carousel -->
+                        <div id="cupcake-carousel" class="carousel">
+                        <img id="cupcake-img" src="images/cc1.jpg" alt="Cupcake">
+                        </div>
+                            <a href="Home/products.html#goToCupCake">
+                            <button>Cupcakes</button>
+                            </a>
+                        </div>
+                    <div class="individual-carousel-area">
+                        <!-- Wedding cake carousel -->
+                        <div id="weddingcake-carousel" class="carousel">
+                        <img id="weddingcake-img" src="images/wec1.jpg" alt="Wedding Cake">
+                        </div>
+                            <a href="Home/products.html#goToWeddingCake">
+                                <button>Wedding Cakes</button>
+                            </a>
+                    </div>
+                 </div>
+            </div>
+        </main>
+        <div id="search-popup-placeholder"></div>
+        <div id="footer-placeholder"></div>
+    </div>
+    <script src="Scripts/header.js"></script>
+    <script src="Scripts/carousel.js"></script>
+    <!--Import product-data.js before search.js in order to be able to search products-->
+    <script src="Scripts/products-data.js"></script>
+    <script src="Scripts/search.js"></script>
+    <script src="Scripts/cart.js"></script>
+    <script src="Scripts/cart-popup.js"></script>
+    <script src="Scripts/footer.js"></script>
+</body>
+</html>

@@ -1,9 +1,5 @@
 // Load the header from header.html and insert it into the page
-const headerPath = location.pathname.endsWith('index.html') || location.pathname === '/' 
-  ? 'Home/header.html' 
-  : 'header.html';
-
-fetch(headerPath)
+fetch('header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;

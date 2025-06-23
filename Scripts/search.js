@@ -1,8 +1,4 @@
-const searchPopupPath = location.pathname.endsWith('index.html') || location.pathname === '/' 
-  ? 'Home/search-popup.html' 
-  : 'search-popup.html';
-
-fetch(searchPopupPath)
+fetch('search-popup.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('search-popup-placeholder').innerHTML = data;
@@ -15,7 +11,7 @@ fetch(searchPopupPath)
       // Manually added pages
       { type: "page", name: "About", url: "about.html" },
       { type: "page", name: "Contact", url: "contact.html" },
-      { type: "page", name: "Home", url: "../index.html" },
+      { type: "page", name: "Home", url: "index.html" },
       { type: "page", name: "Checkout", url: "checkout.html" },
       { type: "page", name: "Products", url: "products.html" }
     ];

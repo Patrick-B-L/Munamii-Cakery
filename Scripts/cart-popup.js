@@ -1,8 +1,4 @@
-const cartPopupPath = location.pathname.endsWith('index.html') || location.pathname === '/' 
-  ? 'Home/cart-popup.html' 
-  : 'cart-popup.html';
-
-fetch(cartPopupPath)
+fetch('cart-popup.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('cart-popup-placeholder').innerHTML = data;
