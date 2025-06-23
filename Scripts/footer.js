@@ -1,4 +1,4 @@
-fetch('/Home/footer.html')
+fetch('Home/footer.html')
     .then(res => res.text())
     .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
