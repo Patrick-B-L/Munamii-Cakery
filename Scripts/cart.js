@@ -55,10 +55,16 @@ document.addEventListener('click', function(e) {
         });
         // Change button text and disable it for 1.2 seconds
         const originalText = btn.textContent;
+        const originalBackgorund = btn.style.backgroundColor;
+        const originalColor = btn.style.color;
         btn.textContent = "Cake Added!";
+        btn.style.backgroundColor = "#fff";
+        btn.style.color = "#4d3224";
         btn.disabled = true;
         setTimeout(() => {
             btn.textContent = originalText;
+            btn.style.backgroundColor = originalBackgorund;
+            btn.style.color = originalColor;
             btn.disabled = false;
         }, 1200); // 1,2 sekunder
     }

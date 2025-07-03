@@ -47,8 +47,10 @@
         }
         if (e.target.classList.contains('remove-btn')) {
             const title = e.target.dataset.title;
+            showConfirmPopup('Are you sure you want to remove this item from the cart?', function() {
             window.removeFromCart(title);
             renderCart();
+            });
         }
     });
 
